@@ -56,10 +56,10 @@ export default function Header() {
                     TwoWaySMS
                   </Link>
                   <Link
-                    to="/Industry/Healthcare"
+                    to="/Industry/A2P"
                     className="block px-3 py-1.5 text-sm hover:bg-gray-100 border-t border-gray-200 transition-all duration-200"
                   >
-                    Healthcare
+                    A2P
                   </Link>
                   <Link
                     to="/Industry/Education"

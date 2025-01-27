@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import A2P from '../components/A2P'
 
 import './App.css';
 import Header from '../components/Header';
@@ -38,6 +39,7 @@ function App() {
           
           {/* Example: Industry/TwowaySMS Page */}
           <Route path="/Industry/TwowaySMS" element={<TwowaySMS />} />
+          <Route path="/Industry/A2P" element={<A2P/>}/>
         </Routes>
       </div>
     </Router>

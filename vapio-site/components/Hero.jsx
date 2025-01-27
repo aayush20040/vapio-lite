@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "aos/dist/aos.css";
 
 // Import images
-import Shopping2 from "../src/assets/shopping.png";
+import video from '../src/assets/vedio.mp4'; 
 import sale1 from "../src/assets/sale.png";
 import women3 from "../src/assets/shopping.png";
 import Card from "../src/Card";
@@ -15,30 +15,7 @@ import Footer from "./Footer";
 import ImageSlider from "./Trust";
 import Foot from "./Foot";
 
-// Data for the carousel
-const ImageList = [
-  {
-    id: 1,
-    img: Shopping2,
-    title: "Upto 50% off on all Men's Wear",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-  {
-    id: 2,
-    img: sale1,
-    title: "30% off on all Women's Wear",  
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-  {
-    id: 3,
-    img: women3,
-    title: "70% off on all Products Sale",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-];
+
 
 // Hero Component
 const Hero = ({ handleOrderPopup }) => {
@@ -61,52 +38,74 @@ const Hero = ({ handleOrderPopup }) => {
 
   return (
     <>
-      {/* Hero Section with Slider */}
-      <div className="relative overflow-hidden min-h-[680px] flex justify-center items-center bg-gradient-to-r from-blue-200 to-orange-300 dark:text-black">
-        <div className="container">
-          <Slider {...settings}>
-            {ImageList.map((data) => (
-              <div key={data.id}>
-                <div className="grid grid-cols-1 sm:grid-cols-2">
-                  <div className="flex flex-col justify-center gap-4 text-center sm:text-left sm:order-1 relative z-10">
-                    <h1
-                      data-aos="zoom-out"
-                      className="text-5xl font-bold"
-                    >
-                      {data.title}
-                    </h1>
-                    <p data-aos="fade-up">{data.description}</p>
-                    <div data-aos="fade-up">
-                      <button
-                        onClick={handleOrderPopup}
-                        className="hover:scale-105 duration-200 bg-red-600 text-white py-2 px-4"
-                      >
-                        Order Now
-                      </button>
-                    </div>
-                  </div>
-                  <div className="order-2">
-                    <div data-aos="zoom-in" className="relative z-10">
-                      <img
-                        src={data.img}
-                        className="w-[300px] h-[300px] object-contain mx-auto"
-                        alt={data.title}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </Slider>
-        </div>
-      </div>
+    {/* Hero Section with Slider */}
+    <div className="slider-container relative">
+      <Slider {...settings}>
+        {/* First Slide with Background Video */}
+        <div>
+          <div className="relative w-full h-[680px] overflow-hidden">
+            <video
+              className="absolute top-0 left-0 w-full h-full object-cover"
+              src={video}  // Use the imported video
+              autoPlay
+              muted
+              loop
+            ></video>
+            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div> {/* Optional overlay */}
+            <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center text-white mt-1">
+            <div className="mt-[-50px] text-center">
+  <h1
+    className="text-5xl font-extrabold text-white leading-tight text-center mb-20"
+    data-aos="fade-up"
+  >
+    Achieve Global Reach with Scalable SMS APIs
+  </h1>
+  <p className="text-center mb-20" data-aos="fade-up">
+    Vapio’s SMS<strong /> API platform empowers businesses to engage
+    <br />
+    customers worldwide with seamless, high-volume messaging. Deliver
+    personalized,
+    <br />
+    timely SMS at scale—whether you’re reaching a few or millions—backed
+    <br />
+    by reliable performance and real-time analytics. Scale effortlessly with
+    our proven, secure APIs.
+  </p>
+  
+  <button
+    className="px-10 py-3 mt-1 bg-blue-500 text-white rounded-lg border-2 border-white shadow-lg transition-all duration-300 transform hover:scale-110 hover:shadow-2xl"
+  >
+    Start a Free Trial
+  </button>
+</div>
+</div>
 
+            
+            
+          </div>
+        </div>
+
+        {/* Second Slide */}
+        <div className="text-center">
+          <h2>     Slide 2</h2>
+          <p>This is the second slide content</p>
+        </div>
+
+        {/* Third Slide */}
+        <div>
+          <h2>Slide 3</h2>
+          <p>This is the third slide content</p>
+        </div>
+      </Slider>
+    </div>
+      {/* Hero Section with Slider */}
+      
       {/* Content Section */}
       <div className="">
         <div className="m-5">
           <h1
             data-aos="fade-up"
-            className="text-center  bg-gradient-to-r from-blue-500 via-orange-500 to-orange-600 bg-clip-text text-transparent text-5xl mx-11 pb-8 font-medium"
+            className="text-center mt-10  bg-gradient-to-r from-blue-500 via-orange-500 to-orange-600 bg-clip-text text-transparent text-5xl mx-11 pb-8 font-medium"
           >
             Your All-in-One Solution for Marketing, Commerce, and Customer Engagement
           </h1>
