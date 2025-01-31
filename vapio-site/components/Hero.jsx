@@ -4,11 +4,9 @@ import Aos from "aos"; // Import AOS for animations
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "aos/dist/aos.css";
-
+import kala from '../src/assets/kala.png'
 // Import images
 import video from '../src/assets/vedio.mp4'; 
-import sale1 from "../src/assets/sale.png";
-import women3 from "../src/assets/shopping.png";
 import Card from "../src/Card";
 import Sumbit from "./Sumbit";
 import Footer from "./Footer";
@@ -84,18 +82,31 @@ const Hero = ({ handleOrderPopup }) => {
             
           </div>
         </div>
+        <div className="h-screen w-full flex items-center justify-center px-20">
+  {/* Left Side - Text Content */}
+  <div className="w-1/2">
+    <h2 className="text-4xl font-bold text-gray-800">Your Title Here</h2>
+    <p className="text-lg text-gray-600 mt-4">
+      Your description goes here. This section can include details about your content.
+    </p>
+  </div>
 
-        {/* Second Slide */}
-        <div className="text-center">
-          <h2>     Slide 2</h2>
-          <p>This is the second slide content</p>
-        </div>
+  {/* Right Side - Image */}
+  <div className="w-1/2 flex justify-start">
+    <img 
+      src={kala} 
+      alt="Kala" 
+      className="h-[500px] w-[500px] object-cover mt-20 ml-200" 
+    />
+  </div>
+</div>
 
-        {/* Third Slide */}
-        <div>
-          <h2>Slide 3</h2>
-          <p>This is the third slide content</p>
-        </div>
+
+
+
+
+
+
       </Slider>
     </div>
       {/* Hero Section with Slider */}
@@ -105,7 +116,7 @@ const Hero = ({ handleOrderPopup }) => {
         <div className="m-5">
           <h1
             data-aos="fade-up"
-            className="text-center mt-10  bg-gradient-to-r from-blue-500 via-orange-500 to-orange-600 bg-clip-text text-transparent text-5xl mx-11 pb-8 font-medium"
+            className="text-center mt-1  bg-gradient-to-r from-blue-500 via-orange-500 to-orange-600 bg-clip-text text-transparent text-5xl mx-11 pb-8 font-medium"
           >
             Your All-in-One Solution for Marketing, Commerce, and Customer Engagement
           </h1>
@@ -154,13 +165,12 @@ const Hero = ({ handleOrderPopup }) => {
       <ImageSlider></ImageSlider>
 
       {/* Card Component */}
-      <Card />
-      <Sumbit></Sumbit>
-      <Foot></Foot>
-      <Footer></Footer>
+      
+      
+      
       
     </>
   );
 };
 
-export default Hero;
+export default Hero; 

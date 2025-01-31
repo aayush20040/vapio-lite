@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default function Footer() {
+export default function Footer(darkMode) {
     return (
-        <footer className="bg-white border-y">
+      <Footer className={`${darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-900"} transition-colors duration-300`}>
             <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
                 <div className="md:flex md:justify-between">
                     <div className="mb-4 md:mb-0">
@@ -173,6 +173,6 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-        </footer>
+        </Footer>
     );
 }

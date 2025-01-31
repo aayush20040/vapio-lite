@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Sumbit = () => {
+const Sumbit = ({ darkMode }) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = (e) => {
@@ -14,13 +14,25 @@ const Sumbit = () => {
   };
 
   return (
-    <div className="relative flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-100 to-orange-100 p-8">
-      <div className="w-full max-w-6xl shadow-lg rounded-lg bg-white p-8 md:p-12 relative z-10">
+    <div
+      className={`relative flex items-center justify-center min-h-screen p-8 ${
+        darkMode ? 'bg-gray-900' : 'bg-gradient-to-r from-blue-100 to-orange-100'
+      }`}
+    >
+      <div
+        className={`w-full max-w-6xl shadow-lg rounded-lg p-8 md:p-12 relative z-10 ${
+          darkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-800'
+        }`}
+      >
         <div className="text-center mb-10">
-          <h1 className="text-4xl font-bold text-gray-800 bg-gradient-to-r from-blue-500 via-orange-500 to-orange-600 bg-clip-text text-transparent">
+          <h1
+            className={`text-4xl font-bold bg-gradient-to-r from-blue-500 via-orange-500 to-orange-600 bg-clip-text text-transparent ${
+              darkMode ? 'text-white' : ''
+            }`}
+          >
             Interested in becoming a Vapio Partner?
           </h1>
-          <p className="text-gray-600 mt-4">
+          <p className={`text-gray-600 mt-4 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
             Fill out the form below and we will get back to you as soon as possible!
           </p>
         </div>
@@ -37,7 +49,7 @@ const Sumbit = () => {
 
           {/* Right Section: Form */}
           <div>
-            <h2 className="text-2xl font-semibold text-gray-700 mb-6 text-center">
+            <h2 className={`text-2xl font-semibold mb-6 text-center ${darkMode ? 'text-gray-200' : 'text-gray-700'}`}>
               Contact Us
             </h2>
 
@@ -45,7 +57,7 @@ const Sumbit = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Name Input */}
                 <div>
-                  <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
+                  <label htmlFor="name" className={`block font-medium mb-2 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                     Name
                   </label>
                   <input
@@ -53,13 +65,15 @@ const Sumbit = () => {
                     id="name"
                     name="name"
                     required
-                    className="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 shadow-sm"
+                    className={`w-full p-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 shadow-sm ${
+                      darkMode ? 'bg-gray-700 text-white' : 'bg-white text-gray-900'
+                    }`}
                   />
                 </div>
 
                 {/* Email Input */}
                 <div>
-                  <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
+                  <label htmlFor="email" className={`block font-medium mb-2 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                     Email
                   </label>
                   <input
@@ -67,13 +81,15 @@ const Sumbit = () => {
                     id="email"
                     name="email"
                     required
-                    className="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 shadow-sm"
+                    className={`w-full p-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 shadow-sm ${
+                      darkMode ? 'bg-gray-700 text-white' : 'bg-white text-gray-900'
+                    }`}
                   />
                 </div>
 
                 {/* Message Textarea */}
                 <div>
-                  <label htmlFor="message" className="block text-gray-700 font-medium mb-2">
+                  <label htmlFor="message" className={`block font-medium mb-2 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                     Message
                   </label>
                   <textarea
@@ -81,14 +97,18 @@ const Sumbit = () => {
                     name="message"
                     rows="4"
                     required
-                    className="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 shadow-sm"
+                    className={`w-full p-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 shadow-sm ${
+                      darkMode ? 'bg-gray-700 text-white' : 'bg-white text-gray-900'
+                    }`}
                   ></textarea>
                 </div>
 
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full py-3  bg-orange-500 text-white font-medium rounded-lg hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500 shadow-md transform hover:scale-105 transition duration-300"
+                  className={`w-full py-3 bg-orange-500 text-white font-medium rounded-lg hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500 shadow-md transform hover:scale-105 transition duration-300 ${
+                    darkMode ? 'hover:bg-orange-600' : ''
+                  }`}
                 >
                   Submit
                 </button>
@@ -108,7 +128,7 @@ const Sumbit = () => {
       </div>
 
       {/* Background Styling */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-100 via-orange-100 to-orange-200 opacity-50"></div>
+      <div className="absolute inset-0 opacity-50 bg-gradient-to-r from-blue-100 via-orange-100 to-orange-200"></div>
     </div>
   );
 };

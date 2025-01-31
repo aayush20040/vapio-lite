@@ -25,7 +25,7 @@ export default function Header() {
   };
 
   return (
-    <header className="shadow-lg relative top-0 bg-white text-black rounded-xl border border-gray-300 px-4 py-2">
+    <header className="shadow-lg relative top-0  text-black rounded-xl  ">
       <nav className="px-4 py-2" role="navigation" aria-label="Main Navigation">
         <div className="flex justify-between items-center max-w-screen-xl mx-auto">
           {/* Logo */}
@@ -36,7 +36,7 @@ export default function Header() {
           {/* Navigation Links */}
           <div className="hidden md:flex space-x-8 items-center">
             <Link to="/" className="text-black hover:text-orange-500">
-              Product
+              Products
             </Link>
 
             {/* Dropdown for Industry */}
@@ -45,35 +45,40 @@ export default function Header() {
                 onClick={toggleDropdown}
                 className="text-black hover:text-orange-500 focus:outline-none"
               >
-                Industry
+                Products
               </button>
               {isOpen && (
                 <div className="absolute left-0 mt-2 bg-white border rounded-md shadow-lg w-40 z-50">
                   <Link
-                    to="/Industry/TwowaySMS"
+                    to="/Products/TwowaySMS"
                     className="block px-3 py-1.5 text-sm hover:bg-gray-100 border-t border-gray-200 transition-all duration-200"
                   >
                     TwoWaySMS
                   </Link>
                   <Link
-                    to="/Industry/A2P"
+                    to="/Products/A2P"
                     className="block px-3 py-1.5 text-sm hover:bg-gray-100 border-t border-gray-200 transition-all duration-200"
                   >
                     A2P
                   </Link>
                   <Link
-                    to="/Industry/Education"
+                    to="/Products/Otp"
                     className="block px-3 py-1.5 text-sm hover:bg-gray-500 border-t border-gray-200 transition-all duration-200"
                   >
-                    Education
+                    Otp
                   </Link>
+                  <Link
+                    to="/Products/Misscall"
+                    className="block px-3 py-1.5 text-sm hover:bg-gray-500 border-t border-gray-200 transition-all duration-200"
+                  >
+                    Misscall
+                  </Link>
+
                 </div>
               )}
             </div>
 
-            <Link to="/Pricing" className="text-black hover:text-orange-500">
-              Pricing
-            </Link>
+            
             <Link to="/Company" className="text-black hover:text-orange-500">
               Company
             </Link>
