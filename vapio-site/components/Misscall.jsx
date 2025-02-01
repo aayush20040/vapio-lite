@@ -194,15 +194,32 @@ The Vapio Missed Call Service allows your customers<br/> to give you a missed ca
           
         ))}
       </div>
+      <div className="flex items-center justify-between p-6 bg-gray-100 mt-6">
+  {/* Left Side: Heading */}
+  <div className="w-1/2 text-left">
+    <h2 className=" mt-4 text-4xl font-semibold flex justify-center text-center bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent">
+    Let's Create a Digital Future Together 
+    </h2>
+  </div>
+
+  {/* Right Side: Button */}
+  <div className="w-1/2 flex justify-end">
+    <button className="px-8 py-3 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-full shadow-lg hover:from-green-500 hover:to-blue-500 transition duration-300 ease-in-out mt-4 mr-10">
+      Talk to Expert 
+    </button>
+  </div>
+</div>
       
-      <div className="p-8 bg-gradient-to-r from-blue-50 to-purple-100">
+      <div className=" mt-10 p-8 bg-gradient-to-r from-blue-50 to-purple-100">
   <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-10">Frequently Asked Questions</h2>
   <div className="max-w-3xl mx-auto space-y-6">
     {[
-      { question: 'What is a missed call service?', answer: 'A missed call service allows businesses to receive calls without answering them, using the missed call as a trigger for an automated response.' },
-      { question: 'How does missed call service help in lead generation?', answer: 'Missed call services engage customers effortlessly, capturing their interest and contact details for follow-up.' },
-      { question: 'Is missed call service cost-effective?', answer: 'Yes, it reduces the cost of customer engagement and marketing while increasing outreach.' },
-      { question: 'Can missed call service integrate with CRM?', answer: 'Absolutely! It can seamlessly integrate with CRM systems to streamline lead management.' }
+      { question: 'What is a missed call solution and how does it work?', answer: 'A missed call solution allows customers to give your business a missed call, which automatically triggers a response or action. You receive the call details, allowing you to follow up and engage with customers in real-time. It’s a cost-effective way to generate leads and improve customer interaction.' },
+      { question: ' How can a missed call solution help my business?', answer: 'It helps in generating leads, running campaigns, and improving customer engagement by allowing customers to reach out with a simple missed call. You can also track interactions, gather feedback, and follow up with leads efficiently..' },
+      { question: 'Is the missed call service secure?', answer: 'Yes, Vapio’s missed call solution is secure. We use encrypted communication and ensure that all customer data is handled safely, in compliance with data protection regulations.' },
+      { question: ' Can I integrate the missed call solution with my CRM?', answer: 'AAbsolutely! Vapio’s missed call service can be seamlessly integrated with your CRM system, allowing you to automatically capture and manage customer data for better follow-up and tracking.' },
+      { question: 'How much does the missed call solution cost?', answer: 'The cost of the missed call solution depends on your specific usage and requirements. Vapio offers flexible pricing options that cater to businesses of all sizes. Feel free to get in touch with our team to get a personalized quote.' }
+    
     ].map((faq, index) => (
       <div key={index} className="rounded-xl overflow-hidden shadow-xl transition-all duration-300 transform hover:scale-105 hover:bg-gradient-to-r hover:from-indigo-200 hover:to-pink-200">
         <button
