@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import otp from '../src/assets/otp.jpg'
-import otp2 from '../src/assets/OTP 2.jpg'
+import otp from "../src/assets/otp.jpg";
+import otp2 from "../src/assets/OTP 2.jpg"
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS styles
 import Signup from './Signup';
@@ -16,7 +16,7 @@ const Otp = () => {
     
       <div className="relative h-[700px] flex flex-col md:flex-row justify-between items-center text-center p-2 bg-gray-100" data-aos="fade-up">
         {/* Top-center heading */}
-        <h1 className="absolute top-0 left-0 right-0 text-3xl  md:text-4xl py-10  mt-10 font-extrabold text-orange-700 font-poppins ">
+        <h1 className="absolute top-0 left-0 right-0 text-3xl  md:text-4xl py-10  font-extrabold text-orange-700 font-poppins ">
           Reliable and Fast OTP SMS Delivery for Your Business
         </h1>
 

@@ -165,6 +165,11 @@ const Hero = ({ handleOrderPopup }) => {
       <ImageSlider></ImageSlider>
 
       {/* Card Component */}
+      {/* <Card />
+      <Sumbit ></Sumbit>
+       
+      <Foot></Foot>
+      <Footer></Footer> */}
       
       
       
