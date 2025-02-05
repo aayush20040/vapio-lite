@@ -28,7 +28,8 @@ export default function Header({ darkMode, setDarkMode }) {
     { to: '/Products/TwowaySMS', label: 'TwoWaySMS' },
     { to: '/Products/A2P', label: 'A2P' },
     { to: '/Products/Otp', label: 'Otp' },
-    { to: '/Products/Misscall', label: 'Misscall' }
+    { to: '/Products/Misscall', label: 'Misscall' },
+    { to: '/Products/Whatsapp', label: 'Whatsapp' }
   ];
 
   return (

@@ -13,6 +13,7 @@ import Misscall from '../components/Misscall';
 import Footer from '../components/Footer';
 import Foot from '../components/Foot';
 import Sumbit from '../components/Sumbit'; // Corrected the typo
+import Whatsapp from '../components/Whatsapp';
 
 function App() {
   const [orderPopup, setOrderPopup] = useState(false);
@@ -55,7 +56,8 @@ function App() {
           <Route path="/products/TwowaySMS" element={<TwowaySMS />} />
           <Route path="/products/A2P" element={<A2P />} />
           <Route path="/products/Otp" element={<Otp />} />
-          <Route path="/products/Misscall" element={<Misscall />} />
+          <Route path="/products/Misscall" element={<Misscall/>} />
+          <Route path="/products/Whatsapp" element={<Whatsapp />} />
         </Routes>
       </div>
 
